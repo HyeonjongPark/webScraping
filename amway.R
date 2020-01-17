@@ -15,9 +15,8 @@ remDr=remoteDriver(remoteServerAddr = "localhost", port=4449L, browserName='chro
 remDr$open() #크롬 Open
 remDr$navigate("https://www.amway.co.kr/") # 홈페이지 이동
 
-btn = remDr$findElement(using = "xpath" , value = '//*[@id="header"]/header/div[1]/nav/div/div[2]/div/div[2]/ul/li[1]/a/img')
+btn = remDr$findElement(using = "xpath" , value = '//*[@id="header"]/header/div[1]/nav/div/div[1]/p/a')
 btn$clickElement() # 검색
-
 
 #btn = remDr$findElement(using = "xpath" , value = '/html/body/div[2]/div[3]/div/form/div/img')
 #btn$clickElement() # 검색

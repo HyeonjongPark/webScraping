@@ -34,6 +34,7 @@ btn3 = remDr$findElement(using = "xpath" , value = '/html/body/div[3]/div/div[2]
 btn3$clickElement() # 재검색
 
 frontPage = remDr$getPageSource()
+frontPage[[1]]
 total_contents = read_html(frontPage[[1]]) %>% html_nodes('.seachBox')%>% html_text()
 total_contents = gsub("\n","",total_contents)
 total_contents = gsub("\t","",total_contents)
@@ -49,6 +50,8 @@ last_page
 substrRight <- function(x, n){
   substr(x, nchar(x)-n+1, nchar(x))
 }
+
+
 last_page = as.integer(substrRight(last_page,1))
 
 
